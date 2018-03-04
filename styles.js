@@ -12,8 +12,13 @@ body#phpbb {
     height: auto;
 }
 
+/* reset min-widths */
+#tabs, 
 div#wrap {
     min-width: 0;
+}
+
+div#wrap {
     padding: 0 2px 10px;
 }
 
@@ -36,16 +41,27 @@ div#wrap {
     margin-top: 0.5em;
 }
 
-.postbody {
+.postbody,
+#message-box {
     width: 100%;
 }
 
+/* forum & topic lists */
+.topiclist dl>:not(dt),              /* all except name */
+.postprofile,
+
+/* post form */
+#format-buttons, 
+#smiley-box,
+#postform .fields1 dl,
+#postform>h3,
+#postform>#topicreview,
+
+/* head & foot */
 #site-description>:not(a),           /* all except logo */
 .navbar .navlinks>:not(.icon-home),  /* all except breadcrumbs */
-.topiclist dl>:not(dt),              /* all except name */
 .display-options,                    /* thread/forum view options */
 .section-viewtopic form#viewtopic,
-.postprofile,
 #jumpbox,
 #page-body>h3,
 #page-body>p,
