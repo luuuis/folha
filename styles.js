@@ -41,8 +41,7 @@ div#wrap {
 }
 
 #site-description>:not(a),           /* all except logo */
-.navbar>.inner>:not(.navlinks),      /* all except breadcrumbs */
-.navbar>.inner>.navlinks .rightside, /* hide widgets next to breadcrumbs */
+.navbar .navlinks>:not(.icon-home),  /* all except breadcrumbs */
 .topiclist dl>:not(dt),              /* all except name */
 .display-options,                    /* thread/forum view options */
 .section-viewtopic form#viewtopic,
