@@ -21,6 +21,16 @@ div#wrap {
     width: 100%;
 }
 
+.attachbox {
+    float: none;
+    overflow: auto;
+}
+
+.attachbox .thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
 #site-description>:not(a),           /* all except logo */
 .navbar>.inner>:not(.navlinks),      /* all except breadcrumbs */
 .navbar>.inner>.navlinks .rightside, /* hide widgets next to breadcrumbs */
