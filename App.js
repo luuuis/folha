@@ -9,6 +9,7 @@ export default class App extends React.Component {
         source={{uri: 'https://www.nissanleafpt.com'}}
         style={{flex: 1, marginTop: 20}}
         injectedJavaScript={`(${addGlobalStyle})('${overrideCSS}')`}
+        userAgent={'Folha'}
       />
     );
   }
