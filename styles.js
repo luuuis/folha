@@ -31,12 +31,21 @@ div#wrap {
     height: auto;
 }
 
+.post {
+    background-image: none;
+}
+
+.postbody {
+    width: 100%;
+}
+
 #site-description>:not(a),           /* all except logo */
 .navbar>.inner>:not(.navlinks),      /* all except breadcrumbs */
 .navbar>.inner>.navlinks .rightside, /* hide widgets next to breadcrumbs */
 .topiclist dl>:not(dt),              /* all except name */
 .display-options,                    /* thread/forum view options */
 .section-viewtopic form#viewtopic,
+.postprofile,
 #jumpbox,
 #page-body>h3,
 #page-body>p,
