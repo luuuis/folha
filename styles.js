@@ -21,10 +21,15 @@ div#wrap {
     width: 100%;
 }
 
-#site-description>:not(a), /* all except logo */
-.navbar>.inner>:not(.navlinks), /* all except breadcrumbs */
+#site-description>:not(a),           /* all except logo */
+.navbar>.inner>:not(.navlinks),      /* all except breadcrumbs */
 .navbar>.inner>.navlinks .rightside, /* hide widgets next to breadcrumbs */
-.topiclist dl>:not(dt), /* all except name */
+.topiclist dl>:not(dt),              /* all except name */
+.display-options,                    /* thread/forum view options */
+.section-viewtopic form#viewtopic,
+#jumpbox,
+#page-body>h3,
+#page-body>p,
 #search-box,
 #page-footer {
     display: none;
