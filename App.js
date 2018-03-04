@@ -7,7 +7,7 @@ export default class App extends React.Component {
     return (
       <WebView
         source={{uri: 'https://www.nissanleafpt.com'}}
-        style={{flex: 1, marginTop: 20}}
+        style={{flex: 1, marginTop: 25}}
         injectedJavaScript={`(${addGlobalStyle})('${overrideCSS}')`}
         userAgent={'Folha'}
       />

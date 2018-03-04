@@ -14,7 +14,7 @@ body#phpbb {
 
 div#wrap {
     min-width: 0;
-    padding: 2px;
+    padding: 0 2px 10px;
 }
 
 .topiclist .row dt {
@@ -33,6 +33,7 @@ div#wrap {
 
 .post {
     background-image: none;
+    margin-top: 0.5em;
 }
 
 .postbody {
