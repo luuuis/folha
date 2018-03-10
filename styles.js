@@ -22,8 +22,27 @@ div#wrap {
     padding: 0 2px 10px;
 }
 
+.topiclist .row dl>* {
+    float: none;
+}
+
+.topiclist .row .icon {
+    background-image: none !important;
+}
+
+.topiclist .row .icon>dt {
+    padding-left: 5px;
+}
+
 .topiclist .row dt {
-    width: 100%;
+    float: left;
+    width: 70%;
+    overflow: scroll;
+}
+
+.topiclist dd.lastpost {
+    float: right;
+    width: 25%;
 }
 
 .attachbox {
@@ -47,7 +66,9 @@ div#wrap {
 }
 
 /* forum & topic lists */
-.topiclist dl>:not(dt),              /* all except name */
+.topiclist .posts,
+.topiclist .topics,
+.topiclist .views,
 .postprofile,
 
 /* post form */
