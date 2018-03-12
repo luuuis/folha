@@ -1,6 +1,6 @@
 {
   "name": "folha",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "devDependencies": {
     "exp": "^49.2.2",
