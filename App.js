@@ -1,14 +1,29 @@
 import React from 'react';
-import {WebView} from 'react-native';
+import {BackHandler, WebView} from 'react-native';
 import {overrideCSS} from "./styles";
 
 export default class App extends React.Component {
+  onNavigationStateChange = (navState) => {
+    this.canGoBack = navState.canGoBack
+  }
+
+  componentDidMount() {
+    BackHandler.addEventListener('hardwareBackPress', () => {
+      if (this.webView && this.canGoBack) {
+        this.webView.goBack()
+        return true
+      }
+    })
+  }
+
   render() {
     return (
       <WebView
+        ref={ref => this.webView = ref}
         source={{uri: 'https://www.nissanleafpt.com'}}
         style={{flex: 1, marginTop: 25}}
         injectedJavaScript={`(${addGlobalStyle})('${overrideCSS}')`}
+        onNavigationStateChange={this.onNavigationStateChange.bind(this)}
         userAgent={'Folha'}
       />
     );
