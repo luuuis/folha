@@ -23,7 +23,7 @@ export default class App extends React.Component {
         source={{uri: 'https://www.nissanleafpt.com'}}
         style={{flex: 1, marginTop: 25}}
         injectedJavaScript={`(${addGlobalStyle})('${overrideCSS}')`}
-        onNavigationStateChange={this.onNavigationStateChange.bind(this)}
+        onNavigationStateChange={this.onNavigationStateChange}
         userAgent={'Folha'}
       />
     );
