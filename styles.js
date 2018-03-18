@@ -65,6 +65,12 @@ div#wrap {
     width: 100%;
 }
 
+/* resize images, videos, etc */
+.postbody .content * {
+    max-width: 100%;
+    height: auto;
+}
+
 /* forum & topic lists */
 .topiclist .posts,
 .topiclist .topics,
