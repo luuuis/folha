@@ -60,6 +60,10 @@ div#wrap {
     margin-top: 0.5em;
 }
 
+.post .signature {
+    display: none;
+}
+
 .postbody,
 #message-box {
     width: 100%;
