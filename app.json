@@ -1,5 +1,9 @@
 {
   "expo": {
-    "sdkVersion": "24.0.0"
+    "slug": "folha",
+    "privacy": "public",
+    "sdkVersion": "24.0.0",
+    "description": "App para o fórum NissanLeafPT",
+    "githubUrl": "https://github.com/luuuis/folha"
   }
 }
