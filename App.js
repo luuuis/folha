@@ -1,10 +1,19 @@
-import React from 'react';
-import {BackHandler, WebView} from 'react-native';
-import {overrideCSS} from "./styles";
+import React from 'react'
+import {BackHandler, Linking, WebView} from 'react-native'
+import {overrideCSS} from "./styles"
+
+const baseURL = 'https://www.nissanleafpt.com'
 
 export default class App extends React.Component {
-  onNavigationStateChange = (navState) => {
-    this.canGoBack = navState.canGoBack
+  onNavigationStateChange = (event) => {
+    if (event.loading === true) {
+      if (event.url.startsWith(baseURL)) {
+        this.canGoBack = event.canGoBack
+      } else {
+        this.webView.stopLoading()
+        Linking.openURL(event.url)
+      }
+    }
   }
 
   componentDidMount() {
@@ -17,16 +26,17 @@ export default class App extends React.Component {
   }
 
   render() {
+
     return (
       <WebView
         ref={ref => this.webView = ref}
-        source={{uri: 'https://www.nissanleafpt.com'}}
+        source={{uri: baseURL}}
         style={{flex: 1, marginTop: 25}}
         injectedJavaScript={`(${addGlobalStyle})('${overrideCSS}')`}
         onNavigationStateChange={this.onNavigationStateChange}
         userAgent={'Folha'}
       />
-    );
+    )
   }
 }
 
@@ -38,4 +48,4 @@ const addGlobalStyle = `function (css) {
     style.innerHTML = css;
     head.appendChild(style);
   }
-}`;
+}`
