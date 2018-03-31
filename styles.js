@@ -71,7 +71,7 @@ div#wrap {
 
 /* resize images, videos, etc */
 .postbody .content * {
-    max-width: 100%;
+    max-width: 100% !important;
     height: auto;
 }
 
